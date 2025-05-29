@@ -15,9 +15,26 @@
         de los estudiantes.
         Finalmente, calcule y muestre el promedio de 
         las notas.</p>
+        button onclick="registrarEstudiantes()">Registrar estudiantes</button>
+        <div id="tablaEstudiantes"></div>
+        <p id>"promedio"</p>
         <script>
-            let estudiantes1 = [Nombre: "", Edad: "", Nota: "",];
-            let pregunta = prompt("Ingrese su nombre: " Nombre);
+        function registrarEstudiantes() {
+            const estudiante = [];
+
+            for (let i = 0; i < 3; i++) {
+                const nombre = prompt("Ingrese el nombre del estudiante:");
+                const edad = prompt("Ingrese la edad del estudiante:");
+                const nota = prompt("Ingrese la nota del estudiante:");
+                
+                estudiante.push({
+                    nombre: nombre,
+                    edad: edad,
+                    nota: parseFloat(nota)
+                });
+            }
+        }
+        alert("Estudiantes registrados correctamente.");
         </script>
 </body>
 </html>
