@@ -1,46 +1,24 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>Registro de Estudiantes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades</title>
 </head>
 <body>
-
-<h2>Ejercicio 1: Registro de estudiantes</h2>
-
-<button onclick="registrarEstudiantes()">Registrar estudiantes</button>
-
-<div id="tablaEstudiantes"></div>
-<p id="promedio"></p>
-
-<script>
-function registrarEstudiantes() {
-  const estudiantes = [];
-
-  for (let i = 0; i < 3; i++) {
-    const nombre = prompt(`Ingrese el nombre del estudiante ${i + 1}:`);
-    const edad = parseInt(prompt(`Ingrese la edad de ${nombre}:`));
-    const nota = parseFloat(prompt(`Ingrese la nota de ${nombre}:`));
-
-    estudiantes.push({ nombre, edad, nota });
-  }
-
-  // Crear tabla HTML
-  let tablaHTML = '<table border="1" cellpadding="5"><tr><th>Nombre</th><th>Edad</th><th>Nota</th></tr>';
-  let sumaNotas = 0;
-
-  estudiantes.forEach(est => {
-    tablaHTML += `<tr><td>${est.nombre}</td><td>${est.edad}</td><td>${est.nota}</td></tr>`;
-    sumaNotas += est.nota;
-  });
-
-  tablaHTML += '</table>';
-
-  document.getElementById('tablaEstudiantes').innerHTML = tablaHTML;
-
-  const promedio = (sumaNotas / estudiantes.length).toFixed(2);
-  document.getElementById('promedio').textContent = `Promedio de notas: ${promedio}`;
-}
-</script>
-
-<hr>
+    <h1>Ejercicios</h1>
+    <ul>
+        <li><a href="htmls1/Ejercicio1.html">Primer Ejercicio</a></li>
+        <li><a href="htmls1/Ejercicio2.html">Segundo Ejercicio</a></li>
+        <li><a href="htmls1/Ejercicio3.html">Tercer Ejercicio</a></li>
+        <li><a href="htmls1/Ejercicio4.html">Cuarto Ejercicio</a></li>
+        <li><a href="htmls1/Ejercicio5.html">Quinto Ejercicio</a></li>
+        <li><a href="htmls1/Ejercicio6.html">Sexto Ejercicio</a></li>
+        <li><a href="htmls1/Ejercicio7.html">Septimo Ejercicio</a></li>
+    </ul>
+    <h2>Mas Ejercicios</h2>
+    <ul>
+        <li><a href="Ejercicios.html">Ejercicios</a></li>
+    </ul>
+</body>
+</html>
